@@ -155,9 +155,9 @@ escapeHtmlAttribute = (string) ->
   return ("" + string).replace(/'/g, "&apos;").replace(/"/g, "&quot;")
 
 getCurrentRouteName = ->
-  router = Router.current()
+  router = FlowRouter
   return unless router
-  routeName = router.route.getName()
+  routeName = router.getRouteName()
   return routeName
 
 # Get seo settings depending on route
