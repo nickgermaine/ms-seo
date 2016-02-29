@@ -24,8 +24,8 @@ SEO =
   set: (options, clearBefore=true) ->
     @clearAll() if clearBefore
 
-    currentRouter = Router.current()
-    url = Router.url(currentRouter.route.getName(), currentRouter.params) if currentRouter
+    currentRouter = FlowRouter._current
+    url = FlowRouter.url(currentRouter.path, currentRouter.params) if currentRouter
     #SEO.set({url: Router.url(currentRouter.route.name, currentRouter.params)})
 
     meta = options.meta

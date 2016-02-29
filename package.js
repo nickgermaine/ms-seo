@@ -1,7 +1,7 @@
 Package.describe({
-  name: "manuelschoebel:ms-seo",
+  name: "nickgermaine:ms-seo",
   summary: "Easily config SEO for your routes",
-  git: "https://github.com/DerMambo/ms-seo.git",
+  git: "https://github.com/nickgermaine/ms-seo.git",
   version: "0.4.1"
 });
 
@@ -14,7 +14,7 @@ Package.onUse(function(api){
   api.use([
     'jquery',
     'deps',
-    'iron:router@1.0.0'
+    'kadira:flow-router@2.9.0'
   ], 'client');
 
   api.addFiles([

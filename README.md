@@ -1,13 +1,13 @@
-ms-seo
+Flow SEO
 ======
 
-An SEO helper package for Meteor.js. Originally posted as an article here: [manuel-schoebel.com/blog/meteor-and-seo](http://www.manuel-schoebel.com/blog/meteor-and-seo "Meteor.js and SEO")
+This package is a version of ms-seo that is compatible with Flow Router (instead of Iron Router).  You can find the original (Iron Router version) at https://github.com/DerMambo/ms-seo.
+
+This package adds SEO-based configuration functionality to Meteor.js apps.  See below for functional examples.
 
 Installation
 ----
-This package is on Atmosphere:
-
-    meteor add manuelschoebel:ms-seo
+Clone this repository into your app/packages directory.
 
 Configuration
 ----
@@ -17,18 +17,18 @@ You can set some standard values. This will be set if nothing else is available.
 Meteor.startup(function() {
     if (Meteor.isClient) {
         return SEO.config({
-            title: 'Manuel Schoebel - MVP Development',
+            title: 'Site Title',
             meta: {
-                'description': 'Manuel Schoebel develops Minimal Viable Producs (MVP) for Startups'
+                'description': '60 character site description'
             },
             og: {
-                'image': 'http://manuel-schoebel.com/images/authors/manuel-schoebel.jpg' 
+                'image': 'http://manuel-schoebel.com/images/authors/manuel-schoebel.jpg'
            }
         });
     }
 });
 ```
-    
+
 As you can see, a meta tag in the head area is defined by a key and a value and it works the same way for the Open Graph 'og' tags.
 
 Static SEO Data
